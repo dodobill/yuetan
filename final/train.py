@@ -11,11 +11,11 @@ from tensorflow.keras.layers import Layer, Input, Embedding
 
 
 def build_data(base_dir, batch_size):
-    train = prepare_2d_feature(data_dir=base_dir + '/enso_round1_train_20210201/CMIP_train.nc')
-    label = prepare_2d_label(label_dir=base_dir + '/enso_round1_train_20210201/CMIP_label.nc')
+    train = prepare_2d_feature(data_dir= '../input/testdata/tcdata/enso_round1_train_20210201/CMIP_train.nc')
+    label = prepare_2d_label(label_dir= '../input/testdata/tcdata/enso_round1_train_20210201/CMIP_label.nc')
 
-    SODA_train = prepare_2d_feature(data_dir=base_dir + '/enso_round1_train_20210201/SODA_train.nc')    
-    SODA_label = prepare_2d_label(label_dir=base_dir + '/enso_round1_train_20210201/SODA_label.nc')
+    SODA_train = prepare_2d_feature(data_dir= '../input/testdata/tcdata/enso_round1_train_20210201/SODA_train.nc')    
+    SODA_label = prepare_2d_label(label_dir= '../input/testdata/tcdata/enso_round1_train_20210201/SODA_label.nc')
 
     train_data_reader = load_cmip(data=train, label=label, random_select=True, filter_1_99=True)
     valid_data_reader = load_soda(data=SODA_train, label=SODA_label, random_select=True)
