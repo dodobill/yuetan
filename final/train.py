@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, './Time-series-prediction')
+sys.path.insert(0, './yuetan/Time-series-prediction')
 # tfts is an open-souced TensorFlow time series package: https://github.com/LongxingTan/Time-series-prediction
 # welcome to star and contribute
 
